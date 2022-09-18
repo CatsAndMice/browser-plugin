@@ -21,6 +21,12 @@ function getBookmarksMap(bookmarks, bookmarksMap) {
     return bookmarksMap
 }
 
+function getChildren(bookmarks = []) {
+    return bookmarks.map((bookmark) => {
+        const { title, url } = bookmark
+        return `<a href="${url}">${title}</a><br/>`
+    }).join('')
+}
 
 /**
  * 1.铺平浏览器已有的所有书签，层级只保留一层
@@ -30,5 +36,12 @@ window.onload = () => {
         const bookmarkChildren = bookmarks[0]
         if (!bookmarkChildren) return
         const bookmarksMap = getBookmarksMap(bookmarkChildren, new Map())
+        const body = $('body')
+        bookmarksMap.forEach((bookmarks, title) => {
+            const contain = $(`<div><h2>${title}</h2><div/>`)
+            const children = getChildren(bookmarks)
+            contain.append(children)
+            body.append(contain)
+        })
     })
 }

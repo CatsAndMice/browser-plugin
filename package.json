@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "coco-git": "^1.3.6"
+  },
+  "name": "plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatsAndMice/browser-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CatsAndMice/browser-plugin/issues"
+  },
+  "homepage": "https://github.com/CatsAndMice/browser-plugin#readme",
+  "description": ""
+}
