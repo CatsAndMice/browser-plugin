@@ -1,0 +1,15 @@
+{
+  "name": "捷豹初始页",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "快捷书签入口",
+  "icons": {
+    "128": "nasapod128x128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "bookmarks"
+  ]
+}
